@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script src="./vue.min.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
@@ -26,6 +28,10 @@
 </body>
 
 <script>
+    // 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+    // 1. 定义 (路由) 组件。
+    // 可以从其他文件 import 进来
     const home = {
         template: '<div>home</div>'
     }
@@ -44,13 +50,13 @@
     //  '/about': { component: about }
     //})
     const routes = [{
-            path: '/home',
-            component: home
-        },
-        {
-            path: '/about',
-            component: about
-        }
+        path: '/home',
+        component: home
+    },
+    {
+        path: '/about',
+        component: about
+    }
     ]
 
     // 3. 创建 router 实例，然后传 `routes` 配置
@@ -68,4 +74,5 @@
 
     // 现在，应用已经启动了！
 </script>
+
 </html>
