@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <input v-model.lazy="parentMsg">
+        <br>
+        <child v-bind:my-message="parentMsg"></child>
+    </div>
+
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+
+    <script>
+        Vue.component('child', {
+                // camelCase in JavaScript
+                props: ['myMessage'],
+                template: '<span>{{ myMessage }}</span>'
+            }
+        )
+
+        new Vue({
+            el: '#root',
+            data: { parentMsg: "" },
+            method: {},
+            component: {}
+        }) 
+    </script>
+
+</body>
+
+</html>
