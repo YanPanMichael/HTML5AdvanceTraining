@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <!-- "有时候在组件中，我们会有输入，比如 input，其实 input 中的 v-model 就是:
+    <input v-bind:value="something" v-on:input="something = $event.target.value">
+    的一个语法糖。" -->
     <div id="v-model-example">
         <p>{{ message }}</p>
         <my-input label="Message" v-model="message"></my-input>
