@@ -1,0 +1,19 @@
+<!-- 一个 Vue 组件的 API 由 3 者组成 —— props, events, 以及 slots:
+
+Props 允许外部环境传递数据到组件内。
+Events 允许组件触发外部环境的副效应（side effects）。
+Slots 允许外部环境来插入内容到组件的视图结构内。
+通过 v-bind 和 v-on 的简写语法，template 可以干净简洁地传递意图： -->
+<script>
+    <my-component
+      :foo="baz"
+      :bar="qux"
+      @event-a="doThis"
+      @event-b="doThat"
+    >
+      <img slot="icon" src="...">
+      <p slot="main-text">Hello!</p>
+    </my-component>
+</script>
+
+<!-- :foo 是 v-bind:foo 的简写，@event-a 则是 v-on:event-a 的简写。 -->
